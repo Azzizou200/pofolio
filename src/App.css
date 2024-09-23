@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(15, 23, 42);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  color: aliceblue;
+  font-size: 2.6em;
+}
+h2 {
+  color: aliceblue;
+  font-size: 1.8em;
+}
+h3 {
+  color: aliceblue;
+  font-size: 1.1em;
+  max-width: 20rem;
+}
+li {
+  color: aliceblue;
+}
+p {
+  color: aliceblue;
+}
+#container {
+  background-color: rgb(15, 23, 42);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px 250px auto;
+  grid-template-areas:
+    "introduction content"
+    "bookmarks content"
+    "footer content";
+  min-height: fit-content;
+}
+hr {
+  border-color: aliceblue;
+}
+.introduction {
+  top: 0;
+  grid-area: introduction;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  height: 33vh;
+}
+.right-side {
+  grid-area: content;
+  height: fit-content;
+}
+
+.bookmarks {
+  top: 250px;
+  position: sticky;
+  grid-area: bookmarks;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 33vh;
+}
+.footer {
+  grid-area: footer;
+  height: 29vh;
+  top: 500px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  margin-right: 40%;
+}
+.short-line {
+  width: 60px;
+  border-width: 2px;
+  border-color: black;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.bookmark {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.bookmarks-box {
+  margin-right: 20%;
+}
+.social-ico {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+}
+@media only screen and (max-width: 840px) {
+  #container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "introduction"
+      "content"
+      "footer";
+  }
+  .bookmarks-box {
+    display: none;
+  }
+  .introduction {
+    padding-left: 5%;
+    position: unset;
+  }
+  .footer {
+    position: unset;
+  }
+}
