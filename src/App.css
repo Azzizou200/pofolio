@@ -27,7 +27,12 @@ li {
   color: aliceblue;
 }
 p {
-  color: aliceblue;
+  color: rgb(117, 134, 148);
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+.cards {
+  margin: 70px;
 }
 #container {
   background-color: rgb(15, 23, 42);
@@ -103,6 +108,55 @@ hr {
   margin-top: 20px;
   width: 30px;
   height: 30px;
+}
+.text-wrap {
+  margin-top: 100px;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+.high-lighted-link {
+  color: azure;
+  text-decoration: none;
+}
+.cards {
+  margin-top: 70px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "date title"
+    "date tools";
+}
+.tool-used {
+  margin: 1px;
+  display: inline;
+}
+.tools {
+  grid-area: tools;
+}
+.title-and-description {
+  grid-area: title;
+}
+.date {
+  grid-area: date;
+}
+.experiences {
+  width: 500px;
+}
+.experiences:hover {
+  .cards:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.064);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .cards {
+    opacity: 0.5;
+  }
 }
 @media only screen and (max-width: 840px) {
   #container {
