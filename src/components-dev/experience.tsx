@@ -10,8 +10,8 @@ export default function Experience(props: any) {
         <p>{props.description}</p>
       </div>
       <div className="tools">
-        {props.tools.map((tool: any) => (
-          <ToolsUsed tools={tool} />
+        {props.tools.map((tool: any, index: any) => (
+          <ToolsUsed tools={tool} key={index} />
         ))}
       </div>
     </div>
