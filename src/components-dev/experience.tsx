@@ -1,7 +1,7 @@
 import ToolsUsed from "./tools-used";
 export default function Experience(props: any) {
   return (
-    <div className="cards">
+    <div className="cards duration-300">
       <div className="date">
         <p>{props.dates}</p>
       </div>

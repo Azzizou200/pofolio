@@ -39,25 +39,26 @@ p {
   background-color: rgb(15, 23, 42);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 250px 250px auto;
+  grid-template-rows: 250px 250px 250px auto;
   grid-template-areas:
     "introduction content"
     "bookmarks content"
-    "footer content";
+    "footer content"
+    "filler content";
   min-height: fit-content;
 }
 hr {
   border-color: aliceblue;
 }
 .introduction {
-  top: 0;
   grid-area: introduction;
+  top: 0;
   position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 10%;
-  height: 33vh;
+  height: max-content;
 }
 .right-side {
   grid-area: content;
@@ -65,19 +66,19 @@ hr {
 }
 
 .bookmarks {
+  grid-area: bookmarks;
   top: 250px;
   position: sticky;
-  grid-area: bookmarks;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 33vh;
 }
 .footer {
   grid-area: footer;
-  height: 29vh;
   top: 500px;
+  height: max-content;
   position: sticky;
   display: flex;
   justify-content: center;
@@ -133,8 +134,14 @@ hr {
     "date tools";
 }
 .tool-used {
-  margin: 1px;
-  display: inline;
+  background-color: rgb(6, 80, 141);
+  display: inline-block;
+  border: 2px solid rgb(6, 80, 141);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2px;
+  width: max-content;
+  height: fit-content;
 }
 .tools {
   grid-area: tools;
@@ -148,12 +155,15 @@ hr {
 .experiences {
   width: 500px;
 }
+
 .experiences:hover {
   .cards:hover {
+    animation-delay: 300ms;
     opacity: 1;
     background: rgba(255, 255, 255, 0.064);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    box-shadow: 2px;
   }
   .cards {
     opacity: 0.5;
