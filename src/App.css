@@ -32,8 +32,8 @@ p {
   margin-top: 4%;
   margin-bottom: 4%;
 }
-.cards {
-  margin: 70px;
+h6 {
+  font-size: 0.8em;
 }
 #container {
   background-color: rgb(15, 23, 42);
@@ -121,11 +121,12 @@ hr {
   text-decoration: none;
 }
 .cards {
-  margin-top: 70px;
+  margin-top: 10px;
   margin-left: 0;
   margin-right: 0;
   padding: 10px;
   border-radius: 5px;
+  margin-left: 60px;
   display: grid;
   grid-template-columns: 110px 1fr;
   grid-template-rows: 1fr auto;
@@ -134,11 +135,14 @@ hr {
     "date tools";
 }
 .tool-used {
-  background-color: rgb(6, 80, 141);
+  background-color: rgba(45, 212, 191, 0.1);
+  color: rgb(94, 234, 212);
   display: inline-block;
-  border: 2px solid rgb(6, 80, 141);
-  border-radius: 10px;
+  border: 0px solid rgb(139, 139, 151);
+  border-radius: 20px;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 2px;
   width: max-content;
   height: fit-content;
