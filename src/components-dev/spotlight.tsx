@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function Spotlight() {
-  let [coords, setCoords] = useState({ x: 10, y: 10 });
+  const [coords, setCoords] = useState({ x: 10, y: 10 });
   const spotlighUpdate = (event: any) => {
     setCoords({
       x: event.clientX,

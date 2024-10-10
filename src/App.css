@@ -52,7 +52,8 @@ hr {
 }
 .introduction {
   grid-area: introduction;
-  top: 0;
+  top: 50px;
+  margin-top: 50px;
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -74,6 +75,8 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .footer {
   grid-area: footer;
@@ -99,7 +102,7 @@ hr {
 .bookmark {
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: 200px;
 }
 .bookmarks-box {
   margin-right: 20%;
@@ -172,6 +175,12 @@ hr {
   }
   .cards {
     opacity: 0.5;
+  }
+}
+.bookmark:hover {
+  .short-line {
+    animation-delay: 300ms;
+    width: 120px;
   }
 }
 @media only screen and (max-width: 840px) {
