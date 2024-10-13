@@ -95,7 +95,7 @@ hr {
 .short-line {
   width: 60px;
   border-width: 2px;
-  transition: width 250ms;
+  transition: width 300ms;
   border-color: black;
   margin-top: 5px;
   margin-right: 5px;
@@ -182,6 +182,9 @@ hr {
 .bookmark:hover {
   .short-line {
     width: 120px;
+  }
+  p {
+    color: aliceblue;
   }
 }
 @media only screen and (max-width: 840px) {
