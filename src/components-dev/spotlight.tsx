@@ -1,14 +1,14 @@
 import { useState } from "react";
 export default function Spotlight() {
   const [coords, setCoords] = useState({ x: 10, y: 10 });
-  const spotlighUpdate = (event: any) => {
+  const spotlighUpdate = (event: MouseEvent) => {
     setCoords({
       x: event.clientX,
       y: event.clientY + window.scrollY,
     });
   };
   window.addEventListener("mousemove", spotlighUpdate);
-  window.addEventListener("onwheel", spotlighUpdate);
+
   return (
     <div
       id="spotlight"

@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 const r = document.getElementById("container");
-export default function mousePosition() {
+export default function MousePosition() {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleWindowMouseMove = (event: { clientX: any; clientY: any }) => {
+    const handleWindowMouseMove = (event: {
+      clientX: number;
+      clientY: number;
+    }) => {
       setCoords({
         x: event.clientX,
         y: event.clientY,

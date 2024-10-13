@@ -1,5 +1,12 @@
 import ToolsUsed from "./tools-used";
-export default function Experience(props: any) {
+type prop = {
+  dates: string;
+  title: string;
+  description: string;
+  tools: Array<string>;
+};
+
+export default function Experience(props: prop) {
   return (
     <div className="cards duration-300">
       <div className="date">
@@ -10,8 +17,8 @@ export default function Experience(props: any) {
         <p>{props.description}</p>
       </div>
       <div className="tools">
-        {props.tools.map((tool: any, index: any) => (
-          <ToolsUsed tools={tool} key={index} />
+        {props.tools.map((tool: string, index: number) => (
+          <ToolsUsed tool={tool} key={index} />
         ))}
       </div>
     </div>

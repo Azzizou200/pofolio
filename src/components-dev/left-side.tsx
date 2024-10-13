@@ -2,7 +2,7 @@ import Bookmark from "./bookmarks";
 import Introduction from "./introduction";
 import Socials from "./socials";
 
-export default function LeftSide() {
+const LeftSide = () => {
   return (
     <>
       <Introduction />
@@ -10,4 +10,5 @@ export default function LeftSide() {
       <Socials />
     </>
   );
-}
+};
+export default LeftSide;

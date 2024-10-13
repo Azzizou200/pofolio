@@ -95,11 +95,13 @@ hr {
 .short-line {
   width: 60px;
   border-width: 2px;
+  transition: width 250ms;
   border-color: black;
   margin-top: 5px;
   margin-right: 5px;
 }
 .bookmark {
+  cursor: pointer;
   display: flex;
   align-items: center;
   width: 200px;
@@ -179,7 +181,6 @@ hr {
 }
 .bookmark:hover {
   .short-line {
-    animation-delay: 300ms;
     width: 120px;
   }
 }

@@ -1,10 +1,10 @@
 type Tools = {
-  tools: string;
+  tool: string;
 };
 export default function ToolsUsed(props: Tools) {
   return (
-    <div className="tool-used" key={"props.tools"}>
-      <h6> {props.tools}</h6>
+    <div className="tool-used">
+      <h6> {props.tool}</h6>
     </div>
   );
 }

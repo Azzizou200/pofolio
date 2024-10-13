@@ -1,6 +1,6 @@
 export default function Paragraph() {
   return (
-    <div className="text-wrap">
+    <div className="text-wrap" id="intro">
       <p>
         Back in 2012, I decided to try my hand at creating custom Tumblr themes
         and tumbled head first into the rabbit hole of coding and web

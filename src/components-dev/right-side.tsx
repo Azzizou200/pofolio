@@ -1,5 +1,6 @@
 import Paragraph from "./paragraph";
 import Experience from "./experience";
+
 const data = {
   dates: [
     "2024-present",
@@ -45,41 +46,21 @@ const data = {
     ["HTML", "CSS", "JavaScript", "JQuery"],
   ],
 };
+
 export default function RightSide() {
   return (
     <div className="right-side">
       <Paragraph />
-      <div className="experiences">
-        <Experience
-          dates={data.dates[0]}
-          title={data.title[0]}
-          description={data.description[0]}
-          tools={data.tools[0]}
-        />
-        <Experience
-          dates={data.dates[1]}
-          title={data.title[1]}
-          description={data.description[1]}
-          tools={data.tools[1]}
-        />
-        <Experience
-          dates={data.dates[2]}
-          title={data.title[2]}
-          description={data.description[2]}
-          tools={data.tools[2]}
-        />
-        <Experience
-          dates={data.dates[3]}
-          title={data.title[3]}
-          description={data.description[3]}
-          tools={data.tools[3]}
-        />
-        <Experience
-          dates={data.dates[4]}
-          title={data.title[4]}
-          description={data.description[4]}
-          tools={data.tools[4]}
-        />
+      <div className="experiences" id="experiences">
+        {data.tools.map((tool: string[], index: number) => (
+          <Experience
+            key={index}
+            tools={tool}
+            dates={data.dates[index]}
+            title={data.title[index]}
+            description={data.description[index]}
+          />
+        ))}
       </div>
     </div>
   );
