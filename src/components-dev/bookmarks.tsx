@@ -16,7 +16,8 @@ export default function BookMarks() {
           key={"start"}
           onClick={() => {
             console.log(paragraph);
-            paragraph.current?.scrollIntoView({
+            window.scrollTo({
+              top: 0,
               behavior: "smooth",
             });
           }}
